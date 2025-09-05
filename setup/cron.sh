@@ -2,8 +2,6 @@
 
 echo "=== Cron Setup ==="
 
-set -euo pipefail
-
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Make sure that cron is running
@@ -14,7 +12,7 @@ sudo ln -sf $DIR/../automation/dotfiles.sh /usr/local/bin/dotfiles.sh
 
 # Add them to cron
 (
-  crontab -l 2>/dev/null || true grep -Fv "/usr/local/bin/dotfiles.sh"
+  crontab -l 2>/dev/null | grep -Fv "/usr/local/bin/dotfiles.sh"
   echo "0 3 */2 * * /usr/local/bin/dotfiles.sh"
 ) | crontab -
 
