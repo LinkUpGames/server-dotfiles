@@ -21,8 +21,3 @@ systemctl enable --now weekly-update.timer
 
 systemctl list-timers | grep weekly-update
 echo "=== Setting up server ==="
-
-# Setup cron
-echo "=== Setting up Cron ==="
-./$DIR/cron.sh
-echo "=== Setting up Cron ==="
