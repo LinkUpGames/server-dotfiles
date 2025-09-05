@@ -1,0 +1,6 @@
+[Unit]
+Description=Weekly system update and reboot
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/weekly-update.sh
