@@ -7,7 +7,8 @@ set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Copy the files
-ln -srf weekly-update.sh /usr/local/bin/weekly-update.sh
+# ln -srf "$DIR/../automation/weekly-update.sh" /usr/local/bin/weekly-update.sh
+cp "$DIR/../automation/weekly-update.sh" /usr/local/bin/weekly-update.sh
 cp weekly-update.service /etc/systemd/system/weekly-update.service
 cp weekly-update.timer /etc/systemd/system/weekly-update.timer
 
