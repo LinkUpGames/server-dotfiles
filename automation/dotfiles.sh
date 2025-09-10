@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 LOGFILE="/var/log/dotfiles.log"
 
@@ -11,7 +11,7 @@ LOGFILE="/var/log/dotfiles.log"
   cd $HOME/server-dotfiles >/dev/null 2>&1
   git pull origin main >/dev/null 2>&1
 
-  source $HOME/.zprofile.zsh
+  source $HOME/profile.zsh
   source $HOME/.zshrc
 
   nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1
