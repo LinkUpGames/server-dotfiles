@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-LOGFILE="/var/log/dotfiles.log"
+LOGFILE="$HOME/log/dotfiles.log"
 
 # Update own dotfiles if any
 {
