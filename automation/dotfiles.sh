@@ -6,7 +6,7 @@ LOGFILE="$HOME/log/dotfiles.log"
 {
 
   cd $HOME/dotfiles
-  git pull origin main
+  git pull origin main >/dev/null 2>&1
 
   cd $HOME/server-dotfiles >/dev/null 2>&1
   git pull origin main >/dev/null 2>&1
