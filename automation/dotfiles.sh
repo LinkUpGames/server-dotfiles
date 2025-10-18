@@ -4,7 +4,7 @@ LOGFILE="$HOME/log/dotfiles.log"
 
 # Update own dotfiles if any
 {
-  echo "Updating"
+  echo "Updating..."
 
   cd $HOME/dotfiles
   git pull origin main >/dev/null 2>&1
