@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 LOGFILE="$HOME/log/dotfiles.log"
 
@@ -16,4 +16,6 @@ LOGFILE="$HOME/log/dotfiles.log"
   source $HOME/.zshrc
 
   nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1
+
+  echo "Update done!"
 } >>"$LOGFILE" 2>&1
