@@ -18,4 +18,4 @@ LOGFILE="$HOME/log/dotfiles.log"
   nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1
 
   echo "Update done!"
-} >>"$LOGFILE" 2>&1
+} >"$LOGFILE" 2>&1
