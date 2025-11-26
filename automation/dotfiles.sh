@@ -9,13 +9,13 @@ LOGFILE="$HOME/logs/dotfiles.log"
   cd $HOME/dotfiles
   git pull origin main >/dev/null 2>&1
 
-  cd $HOME/server-dotfiles >/dev/null 2>&1
+  cd $HOME/server-dotfiles
   git pull origin main >/dev/null 2>&1
 
   source $HOME/profile.zsh
   source $HOME/.zshrc
 
-  nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1
+  nvim --headless "+Lazy! sync" +qa
 
   echo "Update done!"
 } >"$LOGFILE" 2>&1
